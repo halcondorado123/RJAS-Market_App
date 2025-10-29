@@ -31,5 +31,10 @@ namespace RJAS_Market_App
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
