@@ -1,0 +1,57 @@
+USE RJAS_DB
+GO
+
+
+INSERT INTO RJAS.CATEGORIA_PRODUCTO (NOMBRE_CATEGORIA)
+VALUES
+('Tecnología'),
+('Alimentos'),
+('Ropa'),
+('Herramientas'),
+('Hogar'),
+('Belleza'),
+('Juguetes'),
+('Papelería'),
+('Electrodomésticos'),
+('Deportes');
+GO
+
+INSERT INTO RJAS.PROVEEDORES (
+    NOMBRE_PROVEEDOR, ID_CATEGORIA, TELEFONO, EMAIL, DESCRIPCION_PRODUCTO,
+    CANTIDAD, PRECIO, IMPUESTO_IVA, DESCUENTO, ES_ACTIVO, TOTAL
+)
+VALUES
+('TechWorld S.A.', 1, '3004567890', 'ventas@techworld.com', 'Laptops y periféricos', 15, 2500000, 475000, 5, 1, 2612500),
+('Alimentos del Campo', 2, '3102345678', 'contacto@alimentoscampo.com', 'Verduras y frutas frescas', 50, 3500, 665, 0, 1, 4165),
+('Moda Urbana', 3, '3209876543', 'moda@urbana.com', 'Ropa casual y deportiva', 40, 80000, 15200, 10, 1, 87200),
+('FerreMax', 4, '3112233445', 'ventas@ferremax.co', 'Herramientas eléctricas', 20, 150000, 28500, 0, 1, 178500),
+('DecoHogar', 5, '3125566778', 'info@decohogar.co', 'Decoración y muebles', 10, 450000, 85500, 5, 1, 492750),
+('BeautyPro', 6, '3013344556', 'ventas@beautypro.com', 'Productos cosméticos', 30, 25000, 4750, 0, 1, 29750),
+('Juguetelandia', 7, '3159988776', 'info@juguetelandia.com', 'Juguetes educativos', 25, 60000, 11400, 5, 1, 65400),
+('OfficePaper', 8, '3131122334', 'ventas@officepaper.co', 'Suministros de oficina', 100, 1500, 285, 0, 1, 1785),
+('ElectroPlus', 9, '3207788990', 'ventas@electroplus.com', 'Pequeños electrodomésticos', 18, 320000, 60800, 5, 1, 364800),
+('SportZone', 10, '3001122334', 'info@sportzone.co', 'Artículos deportivos', 12, 180000, 34200, 0, 1, 214200);
+GO
+
+SELECT 
+    P.ID_PROVEEDOR,
+    P.NOMBRE_PROVEEDOR,
+    P.ID_CATEGORIA,
+    C.NOMBRE_CATEGORIA,
+    P.TELEFONO,
+    P.EMAIL,
+    P.DESCRIPCION_PRODUCTO,
+    P.CANTIDAD,
+    P.PRECIO,
+    P.IMPUESTO_IVA,
+    P.DESCUENTO,
+    P.TOTAL,
+    P.ES_ACTIVO
+FROM RJAS.PROVEEDORES AS P
+INNER JOIN RJAS.CATEGORIA_PRODUCTO AS C
+    ON P.ID_CATEGORIA = C.ID_CATEGORIA;
+GO
+
+
+SELECT * FROM RJAS.CATEGORIA_PRODUCTO
+SELECT * FROM RJAS.PROVEEDORES

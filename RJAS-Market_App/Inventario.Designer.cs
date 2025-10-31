@@ -48,6 +48,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(549, 218);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // textBox1
             // 
@@ -63,6 +64,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(197, 23);
             textBox2.TabIndex = 2;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // numeroIdLbl
             // 
@@ -82,6 +84,7 @@
             nombreProductoLbl.Size = new Size(56, 15);
             nombreProductoLbl.TabIndex = 4;
             nombreProductoLbl.Text = "Producto";
+            nombreProductoLbl.Click += nombreProductoLbl_Click;
             // 
             // buscarBtn
             // 
@@ -91,6 +94,7 @@
             buscarBtn.TabIndex = 5;
             buscarBtn.Text = "Buscar";
             buscarBtn.UseVisualStyleBackColor = true;
+            buscarBtn.Click += buscarBtn_Click;
             // 
             // button2
             // 
@@ -100,6 +104,7 @@
             button2.TabIndex = 6;
             button2.Text = "Crear";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // eliminarBtn
             // 
@@ -109,6 +114,7 @@
             eliminarBtn.TabIndex = 7;
             eliminarBtn.Text = "Eliminar";
             eliminarBtn.UseVisualStyleBackColor = true;
+            eliminarBtn.Click += eliminarBtn_Click;
             // 
             // limpiarBtn
             // 
