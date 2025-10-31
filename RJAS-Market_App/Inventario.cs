@@ -27,7 +27,7 @@ namespace RJAS_Market_App
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+                    BuscarEnBaseDeDatos(id, "ID");
         {
 
         }
