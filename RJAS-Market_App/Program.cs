@@ -1,15 +1,32 @@
-using Microsoft.Data.SqlClient;
 using System;
-using System.Configuration;
-using System.Data;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RJAS_Market_App.Data
 {
+    internal static class Program
+    {
+        /// <summary>
+        /// Punto de entrada principal para la aplicaci√≥n.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+
+            Application.Run(new Proveedor());
+            Application.Run(new Inventario());
+            
+        }
+    }
+}
 
     static class Program
     {
         /// <summary>
-        /// Punto de entrada principal para la aplicaciÛn.
+        /// Punto de entrada principal para la aplicaci√≥n.
         /// </summary>
         [STAThread]
         static void Main()
@@ -44,7 +61,7 @@ namespace RJAS_Market_App.Data
     //        catch (Exception ex)
     //        {
     //            MessageBox.Show($"Error al conectar con la base de datos:\n{ex.Message}",
-    //                            "Error de conexiÛn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    //                            "Error de conexi√≥n", MessageBoxButtons.OK, MessageBoxIcon.Error);
     //            return false;
     //        }
     //    }
