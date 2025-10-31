@@ -15,9 +15,10 @@ namespace RJAS_Market_App.Data
         static void Main()
         {
             Application.EnableVisualStyles();
-         
-            Application.Run(new Inventario());
+
             Application.Run(new Proveedor());
+            Application.Run(new Inventario());
+            
         }
     }
 }
