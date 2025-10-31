@@ -14,17 +14,20 @@ namespace RJAS_Market_App
 {
     public partial class Inventario : Form
     {
-        private InventarioDataService dataService;
+        // Eliminar esta línea - ya no se necesita porque es estático
+        // private readonly InventarioDataService dataService;
 
-        public Inventario(InventarioDataService dataService)
-        {
-            this.dataService = dataService;
-        }
+        // Eliminar este constructor - ya no se necesita
+        // public Inventario(InventarioDataService dataService)
+        // {
+        //     this.dataService = dataService;
+        // }
 
         public Inventario()
         {
             InitializeComponent();
-            dataService = new InventarioDataService();
+            // Eliminar esta línea - ya no se necesita instanciar
+            // dataService = new InventarioDataService();
             ConfigurarDataGridView();
         }
 
@@ -42,42 +45,7 @@ namespace RJAS_Market_App
             }
         }
 
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nombreProductoLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void BuscarEnBaseDeDatos(string id, string v)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void eliminarBtn_Click(object sender, EventArgs e)
         {
 
         }
@@ -101,7 +69,8 @@ namespace RJAS_Market_App
                 {
                     if (int.TryParse(textBox1.Text, out int id))
                     {
-                        Producto producto = dataService.BuscarPorID(id);
+                        // Usar el método estático directamente
+                        Producto producto = InventarioDataService.BuscarPorID(id);
                         if (producto != null)
                         {
                             resultados.Add(producto);
@@ -117,7 +86,12 @@ namespace RJAS_Market_App
                 // Buscar por nombre si se ingresó
                 else if (!string.IsNullOrWhiteSpace(nombreProductoLbl.Text))
                 {
-                    resultados = dataService.BuscarPorNombre(nombreProductoLbl.Text);
+                    // Si tienes un método BuscarPorNombre, úsalo así:
+                    // List<Producto> productos = InventarioDataService.BuscarPorNombre(nombreProductoLbl.Text);
+                    // resultados.AddRange(productos);
+
+                    MessageBox.Show("Búsqueda por nombre aún no implementada.",
+                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 // Mostrar resultados
@@ -159,16 +133,17 @@ namespace RJAS_Market_App
 
                 // Opcional: poner el foco en el primer campo
                 textBox1.Focus();
-
-                // Opcional: mostrar mensaje de confirmación
-                // MessageBox.Show("Campos limpiados correctamente.", "Información", 
-                //     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al limpiar: {ex.Message}",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
