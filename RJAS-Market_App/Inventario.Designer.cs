@@ -28,127 +28,122 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Label idProductoLbl;
             dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            numeroIdLbl = new Label();
-            nombreProductoLbl = new Label();
-            buscarBtn = new Button();
-            button2 = new Button();
+            crearBtn = new Button();
             eliminarBtn = new Button();
+            noIdLbl = new Label();
+            consultaBodegaLbl = new Label();
+            buscarBtn = new Button();
             limpiarBtn = new Button();
-            bodegaLbl = new Label();
+            textBox1 = new TextBox();
+            nombreProductoLbl = new TextBox();
+            idProductoLbl = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // idProductoLbl
+            // 
+            idProductoLbl.AutoSize = true;
+            idProductoLbl.Location = new Point(250, 108);
+            idProductoLbl.Name = "idProductoLbl";
+            idProductoLbl.Size = new Size(56, 15);
+            idProductoLbl.TabIndex = 4;
+            idProductoLbl.Text = "Producto";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(75, 179);
+            dataGridView1.Location = new Point(55, 219);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(549, 218);
+            dataGridView1.Size = new Size(698, 150);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // textBox1
+            // crearBtn
             // 
-            textBox1.Location = new Point(124, 122);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(42, 23);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(253, 124);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(197, 23);
-            textBox2.TabIndex = 2;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // numeroIdLbl
-            // 
-            numeroIdLbl.AutoSize = true;
-            numeroIdLbl.Location = new Point(80, 127);
-            numeroIdLbl.Name = "numeroIdLbl";
-            numeroIdLbl.Size = new Size(35, 15);
-            numeroIdLbl.TabIndex = 3;
-            numeroIdLbl.Text = "N° ID";
-            numeroIdLbl.Click += label1_Click;
-            // 
-            // nombreProductoLbl
-            // 
-            nombreProductoLbl.AutoSize = true;
-            nombreProductoLbl.Location = new Point(191, 128);
-            nombreProductoLbl.Name = "nombreProductoLbl";
-            nombreProductoLbl.Size = new Size(56, 15);
-            nombreProductoLbl.TabIndex = 4;
-            nombreProductoLbl.Text = "Producto";
-            nombreProductoLbl.Click += nombreProductoLbl_Click;
-            // 
-            // buscarBtn
-            // 
-            buscarBtn.Location = new Point(468, 125);
-            buscarBtn.Name = "buscarBtn";
-            buscarBtn.Size = new Size(75, 23);
-            buscarBtn.TabIndex = 5;
-            buscarBtn.Text = "Buscar";
-            buscarBtn.UseVisualStyleBackColor = true;
-            buscarBtn.Click += buscarBtn_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(285, 424);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 6;
-            button2.Text = "Crear";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            crearBtn.Location = new Point(250, 391);
+            crearBtn.Name = "crearBtn";
+            crearBtn.Size = new Size(75, 23);
+            crearBtn.TabIndex = 1;
+            crearBtn.Text = "Crear";
+            crearBtn.UseVisualStyleBackColor = true;
             // 
             // eliminarBtn
             // 
-            eliminarBtn.Location = new Point(375, 424);
+            eliminarBtn.Location = new Point(479, 391);
             eliminarBtn.Name = "eliminarBtn";
             eliminarBtn.Size = new Size(75, 23);
-            eliminarBtn.TabIndex = 7;
+            eliminarBtn.TabIndex = 2;
             eliminarBtn.Text = "Eliminar";
             eliminarBtn.UseVisualStyleBackColor = true;
-            eliminarBtn.Click += eliminarBtn_Click;
+            // 
+            // noIdLbl
+            // 
+            noIdLbl.AutoSize = true;
+            noIdLbl.Location = new Point(96, 108);
+            noIdLbl.Name = "noIdLbl";
+            noIdLbl.Size = new Size(35, 15);
+            noIdLbl.TabIndex = 3;
+            noIdLbl.Text = "N° ID";
+            // 
+            // consultaBodegaLbl
+            // 
+            consultaBodegaLbl.AutoSize = true;
+            consultaBodegaLbl.Location = new Point(357, 67);
+            consultaBodegaLbl.Name = "consultaBodegaLbl";
+            consultaBodegaLbl.Size = new Size(97, 15);
+            consultaBodegaLbl.TabIndex = 5;
+            consultaBodegaLbl.Text = "Consulta Bodega";
+            // 
+            // buscarBtn
+            // 
+            buscarBtn.Location = new Point(510, 103);
+            buscarBtn.Name = "buscarBtn";
+            buscarBtn.Size = new Size(75, 23);
+            buscarBtn.TabIndex = 6;
+            buscarBtn.Text = "Buscar";
+            buscarBtn.UseVisualStyleBackColor = true;
+            buscarBtn.Click += buscarBtn_Click_1;
             // 
             // limpiarBtn
             // 
-            limpiarBtn.Location = new Point(549, 125);
+            limpiarBtn.Location = new Point(627, 104);
             limpiarBtn.Name = "limpiarBtn";
             limpiarBtn.Size = new Size(75, 23);
-            limpiarBtn.TabIndex = 8;
+            limpiarBtn.TabIndex = 7;
             limpiarBtn.Text = "Limpiar";
             limpiarBtn.UseVisualStyleBackColor = true;
-            limpiarBtn.Click += button1_Click;
+            limpiarBtn.Click += limpiarBtn_Click;
             // 
-            // bodegaLbl
+            // textBox1
             // 
-            bodegaLbl.AutoSize = true;
-            bodegaLbl.Location = new Point(285, 91);
-            bodegaLbl.Name = "bodegaLbl";
-            bodegaLbl.Size = new Size(97, 15);
-            bodegaLbl.TabIndex = 9;
-            bodegaLbl.Text = "Consulta Bodega";
+            textBox1.Location = new Point(137, 105);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(48, 23);
+            textBox1.TabIndex = 8;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // nombreProductoLbl
+            // 
+            nombreProductoLbl.Location = new Point(321, 104);
+            nombreProductoLbl.Name = "nombreProductoLbl";
+            nombreProductoLbl.Size = new Size(183, 23);
+            nombreProductoLbl.TabIndex = 9;
             // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(675, 495);
-            Controls.Add(bodegaLbl);
-            Controls.Add(limpiarBtn);
-            Controls.Add(eliminarBtn);
-            Controls.Add(button2);
-            Controls.Add(buscarBtn);
+            ClientSize = new Size(800, 450);
             Controls.Add(nombreProductoLbl);
-            Controls.Add(numeroIdLbl);
-            Controls.Add(textBox2);
             Controls.Add(textBox1);
+            Controls.Add(limpiarBtn);
+            Controls.Add(buscarBtn);
+            Controls.Add(consultaBodegaLbl);
+            Controls.Add(idProductoLbl);
+            Controls.Add(noIdLbl);
+            Controls.Add(eliminarBtn);
+            Controls.Add(crearBtn);
             Controls.Add(dataGridView1);
             Name = "Inventario";
             Text = "Inventario";
@@ -160,14 +155,14 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label numeroIdLbl;
-        private Label nombreProductoLbl;
-        private Button buscarBtn;
-        private Button button2;
+        private Button crearBtn;
         private Button eliminarBtn;
+        private Label noIdLbl;
+        private Label idProductoLbl;
+        private Label consultaBodegaLbl;
+        private Button buscarBtn;
         private Button limpiarBtn;
-        private Label bodegaLbl;
+        private TextBox textBox1;
+        private TextBox nombreProductoLbl;
     }
 }
