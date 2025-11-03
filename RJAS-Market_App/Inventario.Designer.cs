@@ -37,7 +37,7 @@
             buscarBtn = new Button();
             limpiarBtn = new Button();
             textBox1 = new TextBox();
-            nombreProductoLbl = new TextBox();
+            textBox2 = new TextBox();
             idProductoLbl = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -124,19 +124,20 @@
             textBox1.TabIndex = 8;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // nombreProductoLbl
+            // textBox2
             // 
-            nombreProductoLbl.Location = new Point(321, 104);
-            nombreProductoLbl.Name = "nombreProductoLbl";
-            nombreProductoLbl.Size = new Size(183, 23);
-            nombreProductoLbl.TabIndex = 9;
+            textBox2.Location = new Point(321, 104);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(183, 23);
+            textBox2.TabIndex = 9;
+
             // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(nombreProductoLbl);
+            Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(limpiarBtn);
             Controls.Add(buscarBtn);
@@ -164,6 +165,6 @@
         private Button buscarBtn;
         private Button limpiarBtn;
         private TextBox textBox1;
-        private TextBox nombreProductoLbl;
+        private TextBox textBox2;
     }
 }

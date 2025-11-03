@@ -55,9 +55,9 @@ namespace RJAS_Market_App
             try
             {
                 // Validar que al menos un campo tenga datos
-                if (string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(nombreProductoLbl.Text))
+                if (string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(textBox2.Text))
                 {
-                    MessageBox.Show("Por favor ingrese un ID o nombre de producto para buscar.",
+                    MessageBox.Show("Por favor ingrese un ID para buscar.",
                         "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
@@ -84,14 +84,24 @@ namespace RJAS_Market_App
                     }
                 }
                 // Buscar por nombre si se ingresó
-                else if (!string.IsNullOrWhiteSpace(nombreProductoLbl.Text))
+                else if (!string.IsNullOrWhiteSpace(textBox2.Text))
                 {
-                    // Si tienes un método BuscarPorNombre, úsalo así:
-                    // List<Producto> productos = InventarioDataService.BuscarPorNombre(nombreProductoLbl.Text);
-                    // resultados.AddRange(productos);
+                    string nombreProveedor = textBox2.Text.Trim();
 
-                    MessageBox.Show("Búsqueda por nombre aún no implementada.",
-                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (!string.IsNullOrEmpty(nombreProveedor))
+                    {
+                        Producto producto = InventarioDataService.BuscarPorNombre(nombreProveedor);
+                        if (producto != null)
+                        {
+                            resultados.Add(producto);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe ingresar un nombre valido.",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
 
                 // Mostrar resultados
@@ -123,7 +133,7 @@ namespace RJAS_Market_App
             {
                 // Limpiar los campos de texto
                 textBox1.Clear();
-                nombreProductoLbl.Clear();
+                textBox2.Clear();
 
                 // Limpiar el DataGridView
                 if (dataGridView1 != null)

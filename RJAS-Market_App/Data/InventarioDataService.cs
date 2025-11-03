@@ -2,6 +2,7 @@
 using RJAS_Market_App.Models;
 using System;
 using System.Collections.Generic;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace RJAS_Market_App.Data
 {
@@ -18,9 +19,27 @@ namespace RJAS_Market_App.Data
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM Inventario WHERE ID = @ID";
+                string query = "SELECT " +
+                                "P.ID_PROVEEDOR, " +
+                                "P.NOMBRE_PROVEEDOR, " +
+                                "C.NOMBRE_CATEGORIA, " +
+                                "P.TELEFONO, " +
+                                "P.EMAIL, " +
+                                "P.DESCRIPCION_PRODUCTO, " +
+                                "P.CANTIDAD, " +
+                                "P.PRECIO, " +
+                                "P.IMPUESTO_IVA, " +
+                                "P.DESCUENTO, " +
+                                "P.TOTAL, " +
+                                "P.ES_ACTIVO " +
+                                "FROM RJAS.PROVEEDORES AS P " +
+                                "INNER JOIN RJAS.CATEGORIA_PRODUCTO AS C " +
+                                "ON P.ID_CATEGORIA = C.ID_CATEGORIA " +
+                                "WHERE P.ID_PROVEEDOR = @ID_PROVEEDOR;";
+
+
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@ID", id);
+                cmd.Parameters.AddWithValue("@ID_PROVEEDOR", id);
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -28,13 +47,20 @@ namespace RJAS_Market_App.Data
                 {
                     return new Producto
                     {
-                        ID = (int)reader["ID"],
-                        Nombre = reader["Nombre"].ToString(),
-                        Categoria = reader["Categoria"].ToString(),
-                        Precio = (decimal)reader["Precio"]
+                        IdProveedor = (int)reader["ID_PROVEEDOR"],
+                        NombreProveedor = reader["NOMBRE_PROVEEDOR"].ToString() ?? string.Empty,
+                        NombreCategoria = reader["NOMBRE_CATEGORIA"].ToString(),
+                        Telefono = reader["TELEFONO"].ToString() ?? string.Empty,
+                        Email = reader["EMAIL"].ToString() ?? string.Empty,
+                        DescripcionProducto = reader["DESCRIPCION_PRODUCTO"].ToString(),
+                        Cantidad = reader.IsDBNull(reader.GetOrdinal("CANTIDAD")) ? null : (int?)reader["CANTIDAD"],
+                        Precio = reader.IsDBNull(reader.GetOrdinal("PRECIO")) ? null : Convert.ToDecimal(reader["PRECIO"]),
+                        ImpuestoIva = reader.IsDBNull(reader.GetOrdinal("IMPUESTO_IVA")) ? 0 : Convert.ToDecimal(reader["IMPUESTO_IVA"]),
+                        Descuento = reader.IsDBNull(reader.GetOrdinal("DESCUENTO")) ? null : Convert.ToDecimal(reader["DESCUENTO"]),
+                        Total = reader.IsDBNull(reader.GetOrdinal("TOTAL")) ? 0 : Convert.ToDecimal(reader["TOTAL"]),
+                        EsActivo = reader.IsDBNull(reader.GetOrdinal("ES_ACTIVO")) ? false : (bool)reader["ES_ACTIVO"]
                     };
                 }
-
                 return null;
             }
         }
@@ -43,9 +69,26 @@ namespace RJAS_Market_App.Data
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM Inventario WHERE NOMBRE_PROVEEDOR = @NOMBRE";
+                string query = "SELECT " +
+                                "P.ID_PROVEEDOR, " +
+                                "P.NOMBRE_PROVEEDOR, " +
+                                "C.NOMBRE_CATEGORIA, " +
+                                "P.TELEFONO, " +
+                                "P.EMAIL, " +
+                                "P.DESCRIPCION_PRODUCTO, " +
+                                "P.CANTIDAD, " +
+                                "P.PRECIO, " +
+                                "P.IMPUESTO_IVA, " +
+                                "P.DESCUENTO, " +
+                                "P.TOTAL, " +
+                                "P.ES_ACTIVO " +
+                                "FROM RJAS.PROVEEDORES AS P " +
+                                "INNER JOIN RJAS.CATEGORIA_PRODUCTO AS C " +
+                                "ON P.ID_CATEGORIA = C.ID_CATEGORIA " +
+                                "WHERE P.NOMBRE_PROVEEDOR = @NOMBRE_PROVEEDOR;";
+
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@NOMBRE", nombre);
+                cmd.Parameters.AddWithValue("@NOMBRE_PROVEEDOR", nombre);
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -53,10 +96,18 @@ namespace RJAS_Market_App.Data
                 {
                     return new Producto
                     {
-                        ID = (int)reader["ID"],
-                        Nombre = reader["Nombre"].ToString(),
-                        Categoria = reader["Categoria"].ToString(),
-                        Precio = (decimal)reader["Precio"]
+                        IdProveedor = (int)reader["ID_PROVEEDOR"],
+                        NombreProveedor = reader["NOMBRE_PROVEEDOR"].ToString() ?? string.Empty,
+                        NombreCategoria = reader["NOMBRE_CATEGORIA"].ToString(),
+                        Telefono = reader["TELEFONO"].ToString() ?? string.Empty,
+                        Email = reader["EMAIL"].ToString() ?? string.Empty,
+                        DescripcionProducto = reader["DESCRIPCION_PRODUCTO"].ToString(),
+                        Cantidad = reader.IsDBNull(reader.GetOrdinal("CANTIDAD")) ? null : (int?)reader["CANTIDAD"],
+                        Precio = reader.IsDBNull(reader.GetOrdinal("PRECIO")) ? null : Convert.ToDecimal(reader["PRECIO"]),
+                        ImpuestoIva = reader.IsDBNull(reader.GetOrdinal("IMPUESTO_IVA")) ? 0 : Convert.ToDecimal(reader["IMPUESTO_IVA"]),
+                        Descuento = reader.IsDBNull(reader.GetOrdinal("DESCUENTO")) ? null : Convert.ToDecimal(reader["DESCUENTO"]),
+                        Total = reader.IsDBNull(reader.GetOrdinal("TOTAL")) ? 0 : Convert.ToDecimal(reader["TOTAL"]),
+                        EsActivo = reader.IsDBNull(reader.GetOrdinal("ES_ACTIVO")) ? false : (bool)reader["ES_ACTIVO"]
                     };
                 }
 
