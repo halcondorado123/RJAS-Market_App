@@ -2,15 +2,8 @@
 {
     partial class Inventario
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,149 +15,292 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            Label idProductoLbl;
-            dataGridView1 = new DataGridView();
-            crearBtn = new Button();
-            eliminarBtn = new Button();
-            noIdLbl = new Label();
-            consultaBodegaLbl = new Label();
+            panelHeader = new Panel();
+            lblTitulo = new Label();
+            pictureBoxLogo = new PictureBox();
+            panelBusqueda = new Panel();
+            lblConsultaBodega = new Label();
+            lblID = new Label();
+            textBox1 = new TextBox();
+            lblProducto = new Label();
+            textBox2 = new TextBox();
             buscarBtn = new Button();
             limpiarBtn = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            idProductoLbl = new Label();
+            panelDataGrid = new Panel();
+            dataGridView1 = new DataGridView();
+            panelBotones = new Panel();
+            crearBtn = new Button();
+            eliminarBtn = new Button();
+            panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
+            panelBusqueda.SuspendLayout();
+            panelDataGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panelBotones.SuspendLayout();
             SuspendLayout();
             // 
-            // idProductoLbl
+            // panelHeader
             // 
-            idProductoLbl.AutoSize = true;
-            idProductoLbl.Location = new Point(250, 108);
-            idProductoLbl.Name = "idProductoLbl";
-            idProductoLbl.Size = new Size(56, 15);
-            idProductoLbl.TabIndex = 4;
-            idProductoLbl.Text = "Producto";
+            panelHeader.BackColor = Color.FromArgb(41, 128, 185);
+            panelHeader.Controls.Add(lblTitulo);
+            panelHeader.Controls.Add(pictureBoxLogo);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Margin = new Padding(4, 3, 4, 3);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1400, 92);
+            panelHeader.TabIndex = 0;
             // 
-            // dataGridView1
+            // lblTitulo
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(55, 219);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(698, 150);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(117, 23);
+            lblTitulo.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(446, 37);
+            lblTitulo.TabIndex = 1;
+            lblTitulo.Text = "GESTIÓN DE INVENTARIO R-J-A-S";
             // 
-            // crearBtn
+            // pictureBoxLogo
             // 
-            crearBtn.Location = new Point(250, 391);
-            crearBtn.Name = "crearBtn";
-            crearBtn.Size = new Size(75, 23);
-            crearBtn.TabIndex = 1;
-            crearBtn.Text = "Crear";
-            crearBtn.UseVisualStyleBackColor = true;
+            pictureBoxLogo.BackColor = Color.White;
+            pictureBoxLogo.Location = new Point(23, 12);
+            pictureBoxLogo.Margin = new Padding(4, 3, 4, 3);
+            pictureBoxLogo.Name = "pictureBoxLogo";
+            pictureBoxLogo.Size = new Size(70, 69);
+            pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxLogo.TabIndex = 0;
+            pictureBoxLogo.TabStop = false;
             // 
-            // eliminarBtn
+            // panelBusqueda
             // 
-            eliminarBtn.Location = new Point(479, 391);
-            eliminarBtn.Name = "eliminarBtn";
-            eliminarBtn.Size = new Size(75, 23);
-            eliminarBtn.TabIndex = 2;
-            eliminarBtn.Text = "Eliminar";
-            eliminarBtn.UseVisualStyleBackColor = true;
+            panelBusqueda.BackColor = Color.White;
+            panelBusqueda.BorderStyle = BorderStyle.FixedSingle;
+            panelBusqueda.Controls.Add(lblConsultaBodega);
+            panelBusqueda.Controls.Add(lblID);
+            panelBusqueda.Controls.Add(textBox1);
+            panelBusqueda.Controls.Add(lblProducto);
+            panelBusqueda.Controls.Add(textBox2);
+            panelBusqueda.Controls.Add(buscarBtn);
+            panelBusqueda.Controls.Add(limpiarBtn);
+            panelBusqueda.Location = new Point(23, 115);
+            panelBusqueda.Margin = new Padding(4, 3, 4, 3);
+            panelBusqueda.Name = "panelBusqueda";
+            panelBusqueda.Size = new Size(1353, 138);
+            panelBusqueda.TabIndex = 1;
             // 
-            // noIdLbl
+            // lblConsultaBodega
             // 
-            noIdLbl.AutoSize = true;
-            noIdLbl.Location = new Point(96, 108);
-            noIdLbl.Name = "noIdLbl";
-            noIdLbl.Size = new Size(35, 15);
-            noIdLbl.TabIndex = 3;
-            noIdLbl.Text = "N° ID";
+            lblConsultaBodega.AutoSize = true;
+            lblConsultaBodega.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblConsultaBodega.ForeColor = Color.FromArgb(52, 73, 94);
+            lblConsultaBodega.Location = new Point(23, 17);
+            lblConsultaBodega.Margin = new Padding(4, 0, 4, 0);
+            lblConsultaBodega.Name = "lblConsultaBodega";
+            lblConsultaBodega.Size = new Size(163, 25);
+            lblConsultaBodega.TabIndex = 0;
+            lblConsultaBodega.Text = "Consulta Bodega";
             // 
-            // consultaBodegaLbl
+            // lblID
             // 
-            consultaBodegaLbl.AutoSize = true;
-            consultaBodegaLbl.Location = new Point(357, 67);
-            consultaBodegaLbl.Name = "consultaBodegaLbl";
-            consultaBodegaLbl.Size = new Size(97, 15);
-            consultaBodegaLbl.TabIndex = 5;
-            consultaBodegaLbl.Text = "Consulta Bodega";
+            lblID.AutoSize = true;
+            lblID.Font = new Font("Segoe UI", 10F);
+            lblID.ForeColor = Color.FromArgb(52, 73, 94);
+            lblID.Location = new Point(29, 63);
+            lblID.Margin = new Padding(4, 0, 4, 0);
+            lblID.Name = "lblID";
+            lblID.Size = new Size(42, 19);
+            lblID.TabIndex = 1;
+            lblID.Text = "N° ID";
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 10F);
+            textBox1.Location = new Point(29, 89);
+            textBox1.Margin = new Padding(4, 3, 4, 3);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(233, 25);
+            textBox1.TabIndex = 2;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // lblProducto
+            // 
+            lblProducto.AutoSize = true;
+            lblProducto.Font = new Font("Segoe UI", 10F);
+            lblProducto.ForeColor = Color.FromArgb(52, 73, 94);
+            lblProducto.Location = new Point(292, 63);
+            lblProducto.Margin = new Padding(4, 0, 4, 0);
+            lblProducto.Name = "lblProducto";
+            lblProducto.Size = new Size(141, 19);
+            lblProducto.TabIndex = 3;
+            lblProducto.Text = "Producto / Proveedor";
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Segoe UI", 10F);
+            textBox2.Location = new Point(292, 89);
+            textBox2.Margin = new Padding(4, 3, 4, 3);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(466, 25);
+            textBox2.TabIndex = 4;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // buscarBtn
             // 
-            buscarBtn.Location = new Point(510, 103);
+            buscarBtn.BackColor = Color.FromArgb(46, 204, 113);
+            buscarBtn.Cursor = Cursors.Hand;
+            buscarBtn.FlatAppearance.BorderSize = 0;
+            buscarBtn.FlatStyle = FlatStyle.Flat;
+            buscarBtn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            buscarBtn.ForeColor = Color.White;
+            buscarBtn.Location = new Point(793, 81);
+            buscarBtn.Margin = new Padding(4, 3, 4, 3);
             buscarBtn.Name = "buscarBtn";
-            buscarBtn.Size = new Size(75, 23);
-            buscarBtn.TabIndex = 6;
-            buscarBtn.Text = "Buscar";
-            buscarBtn.UseVisualStyleBackColor = true;
+            buscarBtn.Size = new Size(140, 40);
+            buscarBtn.TabIndex = 5;
+            buscarBtn.Text = "🔍 Buscar";
+            buscarBtn.UseVisualStyleBackColor = false;
             buscarBtn.Click += buscarBtn_Click_1;
             // 
             // limpiarBtn
             // 
-            limpiarBtn.Location = new Point(627, 104);
+            limpiarBtn.BackColor = Color.FromArgb(149, 165, 166);
+            limpiarBtn.Cursor = Cursors.Hand;
+            limpiarBtn.FlatAppearance.BorderSize = 0;
+            limpiarBtn.FlatStyle = FlatStyle.Flat;
+            limpiarBtn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            limpiarBtn.ForeColor = Color.White;
+            limpiarBtn.Location = new Point(957, 81);
+            limpiarBtn.Margin = new Padding(4, 3, 4, 3);
             limpiarBtn.Name = "limpiarBtn";
-            limpiarBtn.Size = new Size(75, 23);
-            limpiarBtn.TabIndex = 7;
-            limpiarBtn.Text = "Limpiar";
-            limpiarBtn.UseVisualStyleBackColor = true;
+            limpiarBtn.Size = new Size(140, 40);
+            limpiarBtn.TabIndex = 6;
+            limpiarBtn.Text = "🗑️ Limpiar";
+            limpiarBtn.UseVisualStyleBackColor = false;
             limpiarBtn.Click += limpiarBtn_Click;
             // 
-            // textBox1
+            // panelDataGrid
             // 
-            textBox1.Location = new Point(137, 105);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(48, 23);
-            textBox1.TabIndex = 8;
-            textBox1.TextChanged += textBox1_TextChanged;
+            panelDataGrid.BackColor = Color.White;
+            panelDataGrid.BorderStyle = BorderStyle.FixedSingle;
+            panelDataGrid.Controls.Add(dataGridView1);
+            panelDataGrid.Location = new Point(23, 277);
+            panelDataGrid.Margin = new Padding(4, 3, 4, 3);
+            panelDataGrid.Name = "panelDataGrid";
+            panelDataGrid.Size = new Size(1353, 404);
+            panelDataGrid.TabIndex = 2;
             // 
-            // textBox2
+            // dataGridView1
             // 
-            textBox2.Location = new Point(321, 104);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(183, 23);
-            textBox2.TabIndex = 9;
-
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Margin = new Padding(4, 3, 4, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(1351, 402);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
+            // 
+            // panelBotones
+            // 
+            panelBotones.BackColor = Color.White;
+            panelBotones.Controls.Add(crearBtn);
+            panelBotones.Controls.Add(eliminarBtn);
+            panelBotones.Location = new Point(23, 692);
+            panelBotones.Margin = new Padding(4, 3, 4, 3);
+            panelBotones.Name = "panelBotones";
+            panelBotones.Size = new Size(1353, 69);
+            panelBotones.TabIndex = 3;
+            // 
+            // crearBtn
+            // 
+            crearBtn.BackColor = Color.FromArgb(52, 152, 219);
+            crearBtn.Cursor = Cursors.Hand;
+            crearBtn.FlatAppearance.BorderSize = 0;
+            crearBtn.FlatStyle = FlatStyle.Flat;
+            crearBtn.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            crearBtn.ForeColor = Color.White;
+            crearBtn.Location = new Point(501, 13);
+            crearBtn.Margin = new Padding(4, 3, 4, 3);
+            crearBtn.Name = "crearBtn";
+            crearBtn.Size = new Size(163, 46);
+            crearBtn.TabIndex = 0;
+            crearBtn.Text = "➕ Crear";
+            crearBtn.UseVisualStyleBackColor = false;
+            crearBtn.Click += crearBtn_Click;
+            // 
+            // eliminarBtn
+            // 
+            eliminarBtn.BackColor = Color.FromArgb(231, 76, 60);
+            eliminarBtn.Cursor = Cursors.Hand;
+            eliminarBtn.FlatAppearance.BorderSize = 0;
+            eliminarBtn.FlatStyle = FlatStyle.Flat;
+            eliminarBtn.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            eliminarBtn.ForeColor = Color.White;
+            eliminarBtn.Location = new Point(687, 13);
+            eliminarBtn.Margin = new Padding(4, 3, 4, 3);
+            eliminarBtn.Name = "eliminarBtn";
+            eliminarBtn.Size = new Size(163, 46);
+            eliminarBtn.TabIndex = 1;
+            eliminarBtn.Text = "❌ Eliminar";
+            eliminarBtn.UseVisualStyleBackColor = false;
+            eliminarBtn.Click += eliminarBtn_Click;
             // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(limpiarBtn);
-            Controls.Add(buscarBtn);
-            Controls.Add(consultaBodegaLbl);
-            Controls.Add(idProductoLbl);
-            Controls.Add(noIdLbl);
-            Controls.Add(eliminarBtn);
-            Controls.Add(crearBtn);
-            Controls.Add(dataGridView1);
+            BackColor = Color.FromArgb(236, 240, 241);
+            ClientSize = new Size(1400, 785);
+            Controls.Add(panelBotones);
+            Controls.Add(panelDataGrid);
+            Controls.Add(panelBusqueda);
+            Controls.Add(panelHeader);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
             Name = "Inventario";
-            Text = "Inventario";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "RJAS Market - Inventario";
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
+            panelBusqueda.ResumeLayout(false);
+            panelBusqueda.PerformLayout();
+            panelDataGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panelBotones.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private Button crearBtn;
-        private Button eliminarBtn;
-        private Label noIdLbl;
-        private Label idProductoLbl;
-        private Label consultaBodegaLbl;
-        private Button buscarBtn;
-        private Button limpiarBtn;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Panel panelBusqueda;
+        private System.Windows.Forms.Label lblConsultaBodega;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblProducto;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button buscarBtn;
+        private System.Windows.Forms.Button limpiarBtn;
+        private System.Windows.Forms.Panel panelDataGrid;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panelBotones;
+        private System.Windows.Forms.Button crearBtn;
+        private System.Windows.Forms.Button eliminarBtn;
     }
 }

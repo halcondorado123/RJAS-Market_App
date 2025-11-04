@@ -10,22 +10,6 @@ using System.Windows.Forms;
 
 namespace RJAS_Market_App.Data
 {
-    //public static class Program
-    //{
-    //    /// <summary>
-    //    /// Punto de entrada principal para la aplicación.
-    //    /// </summary>
-    //    [STAThread]
-    //    static void Main()
-    //    {
-    //        Application.EnableVisualStyles();
-
-    //        Application.Run(new Proveedor());
-    //        Application.Run(new Inventario());
-
-    //    }
-    //}
-
 
     public static class Program
     {

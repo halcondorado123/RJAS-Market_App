@@ -14,21 +14,14 @@ namespace RJAS_Market_App
 {
     public partial class Inventario : Form
     {
-        // Eliminar esta línea - ya no se necesita porque es estático
-        // private readonly InventarioDataService dataService;
-
-        // Eliminar este constructor - ya no se necesita
-        // public Inventario(InventarioDataService dataService)
-        // {
-        //     this.dataService = dataService;
-        // }
+        private readonly InventarioDataService _inventarioService;
 
         public Inventario()
         {
             InitializeComponent();
-            // Eliminar esta línea - ya no se necesita instanciar
-            // dataService = new InventarioDataService();
+            _inventarioService = new InventarioDataService();
             ConfigurarDataGridView();
+            CargarProductos();
         }
 
         // Configurar el DataGridView (si tienes uno en el panel gris)
@@ -54,27 +47,22 @@ namespace RJAS_Market_App
         {
             try
             {
-                // Validar que al menos un campo tenga datos
                 if (string.IsNullOrWhiteSpace(textBox1.Text) && string.IsNullOrWhiteSpace(textBox2.Text))
                 {
-                    MessageBox.Show("Por favor ingrese un ID para buscar.",
+                    MessageBox.Show("Por favor ingrese un ID o nombre para buscar.",
                         "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
                 List<Producto> resultados = new List<Producto>();
 
-                // Buscar por ID si se ingresó
                 if (!string.IsNullOrWhiteSpace(textBox1.Text))
                 {
                     if (int.TryParse(textBox1.Text, out int id))
                     {
-                        // Usar el método estático directamente
-                        Producto producto = InventarioDataService.BuscarPorID(id);
+                        Producto producto = _inventarioService.BuscarPorID(id);
                         if (producto != null)
-                        {
                             resultados.Add(producto);
-                        }
                     }
                     else
                     {
@@ -83,28 +71,15 @@ namespace RJAS_Market_App
                         return;
                     }
                 }
-                // Buscar por nombre si se ingresó
                 else if (!string.IsNullOrWhiteSpace(textBox2.Text))
                 {
                     string nombreProveedor = textBox2.Text.Trim();
 
-                    if (!string.IsNullOrEmpty(nombreProveedor))
-                    {
-                        Producto producto = InventarioDataService.BuscarPorNombre(nombreProveedor);
-                        if (producto != null)
-                        {
-                            resultados.Add(producto);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe ingresar un nombre valido.",
-                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
+                    Producto producto = _inventarioService.BuscarPorNombre(nombreProveedor);
+                    if (producto != null)
+                        resultados.Add(producto);
                 }
 
-                // Mostrar resultados
                 if (resultados.Count > 0)
                 {
                     dataGridView1.DataSource = null;
@@ -127,6 +102,7 @@ namespace RJAS_Market_App
             }
         }
 
+
         private void limpiarBtn_Click(object sender, EventArgs e)
         {
             try
@@ -143,6 +119,8 @@ namespace RJAS_Market_App
 
                 // Opcional: poner el foco en el primer campo
                 textBox1.Focus();
+
+                CargarProductos();
             }
             catch (Exception ex)
             {
@@ -154,6 +132,66 @@ namespace RJAS_Market_App
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void crearBtn_Click(object sender, EventArgs e)
+        {
+            Proveedor crearProductoForm = new Proveedor();
+            crearProductoForm.Show();
+        }
+
+        private void CargarProductos()
+        {
+            try
+            {
+                List<Producto> productos = _inventarioService.ObtenerTodos();
+                dataGridView1.DataSource = productos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los productos: {ex.Message}");
+            }
+        }
+
+        private void eliminarBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Por favor, selecciona un producto para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Obtener el ID del producto seleccionado
+            int idProveedor = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdProveedor"].Value);
+
+            string nombreProveedor = dataGridView1.CurrentRow.Cells["NombreProveedor"].Value.ToString();
+
+            // Mostrar mensaje de confirmación
+            DialogResult result = MessageBox.Show(
+                $"¿Seguro que deseas eliminar el proveedor '{nombreProveedor}'?",
+                "Confirmar eliminación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    _inventarioService.EliminarProveedor(idProveedor);
+                    MessageBox.Show("Registro eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarProductos(); // refrescar la tabla
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al eliminar: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
