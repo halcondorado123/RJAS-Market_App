@@ -48,9 +48,9 @@
             panelHeader.Controls.Add(pictureBoxLogo);
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Location = new Point(0, 0);
-            panelHeader.Margin = new Padding(4, 3, 4, 3);
+            panelHeader.Margin = new Padding(5, 4, 5, 4);
             panelHeader.Name = "panelHeader";
-            panelHeader.Size = new Size(1400, 92);
+            panelHeader.Size = new Size(1600, 123);
             panelHeader.TabIndex = 0;
             // 
             // lblTitulo
@@ -58,20 +58,21 @@
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblTitulo.ForeColor = Color.White;
-            lblTitulo.Location = new Point(117, 23);
-            lblTitulo.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo.Location = new Point(134, 31);
+            lblTitulo.Margin = new Padding(5, 0, 5, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(446, 37);
+            lblTitulo.Size = new Size(564, 46);
             lblTitulo.TabIndex = 1;
             lblTitulo.Text = "GESTIÓN DE INVENTARIO R-J-A-S";
             // 
             // pictureBoxLogo
             // 
             pictureBoxLogo.BackColor = Color.White;
-            pictureBoxLogo.Location = new Point(23, 12);
-            pictureBoxLogo.Margin = new Padding(4, 3, 4, 3);
+            pictureBoxLogo.Image = Properties.Resources._73fb2ca0_3dc4_4c58_b97c_4ef7a4456137;
+            pictureBoxLogo.Location = new Point(26, 16);
+            pictureBoxLogo.Margin = new Padding(5, 4, 5, 4);
             pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(70, 69);
+            pictureBoxLogo.Size = new Size(80, 92);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxLogo.TabIndex = 0;
             pictureBoxLogo.TabStop = false;
@@ -87,10 +88,10 @@
             panelBusqueda.Controls.Add(textBox2);
             panelBusqueda.Controls.Add(buscarBtn);
             panelBusqueda.Controls.Add(limpiarBtn);
-            panelBusqueda.Location = new Point(23, 115);
-            panelBusqueda.Margin = new Padding(4, 3, 4, 3);
+            panelBusqueda.Location = new Point(26, 153);
+            panelBusqueda.Margin = new Padding(5, 4, 5, 4);
             panelBusqueda.Name = "panelBusqueda";
-            panelBusqueda.Size = new Size(1353, 138);
+            panelBusqueda.Size = new Size(1546, 183);
             panelBusqueda.TabIndex = 1;
             // 
             // lblConsultaBodega
@@ -98,10 +99,10 @@
             lblConsultaBodega.AutoSize = true;
             lblConsultaBodega.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblConsultaBodega.ForeColor = Color.FromArgb(52, 73, 94);
-            lblConsultaBodega.Location = new Point(23, 17);
-            lblConsultaBodega.Margin = new Padding(4, 0, 4, 0);
+            lblConsultaBodega.Location = new Point(26, 23);
+            lblConsultaBodega.Margin = new Padding(5, 0, 5, 0);
             lblConsultaBodega.Name = "lblConsultaBodega";
-            lblConsultaBodega.Size = new Size(163, 25);
+            lblConsultaBodega.Size = new Size(207, 32);
             lblConsultaBodega.TabIndex = 0;
             lblConsultaBodega.Text = "Consulta Bodega";
             // 
@@ -110,20 +111,20 @@
             lblID.AutoSize = true;
             lblID.Font = new Font("Segoe UI", 10F);
             lblID.ForeColor = Color.FromArgb(52, 73, 94);
-            lblID.Location = new Point(29, 63);
-            lblID.Margin = new Padding(4, 0, 4, 0);
+            lblID.Location = new Point(33, 84);
+            lblID.Margin = new Padding(5, 0, 5, 0);
             lblID.Name = "lblID";
-            lblID.Size = new Size(42, 19);
+            lblID.Size = new Size(51, 23);
             lblID.TabIndex = 1;
             lblID.Text = "N° ID";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 10F);
-            textBox1.Location = new Point(29, 89);
-            textBox1.Margin = new Padding(4, 3, 4, 3);
+            textBox1.Location = new Point(33, 119);
+            textBox1.Margin = new Padding(5, 4, 5, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(233, 25);
+            textBox1.Size = new Size(266, 30);
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -132,20 +133,20 @@
             lblProducto.AutoSize = true;
             lblProducto.Font = new Font("Segoe UI", 10F);
             lblProducto.ForeColor = Color.FromArgb(52, 73, 94);
-            lblProducto.Location = new Point(292, 63);
-            lblProducto.Margin = new Padding(4, 0, 4, 0);
+            lblProducto.Location = new Point(334, 84);
+            lblProducto.Margin = new Padding(5, 0, 5, 0);
             lblProducto.Name = "lblProducto";
-            lblProducto.Size = new Size(141, 19);
+            lblProducto.Size = new Size(175, 23);
             lblProducto.TabIndex = 3;
             lblProducto.Text = "Producto / Proveedor";
             // 
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 10F);
-            textBox2.Location = new Point(292, 89);
-            textBox2.Margin = new Padding(4, 3, 4, 3);
+            textBox2.Location = new Point(334, 119);
+            textBox2.Margin = new Padding(5, 4, 5, 4);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(466, 25);
+            textBox2.Size = new Size(532, 30);
             textBox2.TabIndex = 4;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
@@ -157,10 +158,10 @@
             buscarBtn.FlatStyle = FlatStyle.Flat;
             buscarBtn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             buscarBtn.ForeColor = Color.White;
-            buscarBtn.Location = new Point(793, 81);
-            buscarBtn.Margin = new Padding(4, 3, 4, 3);
+            buscarBtn.Location = new Point(906, 108);
+            buscarBtn.Margin = new Padding(5, 4, 5, 4);
             buscarBtn.Name = "buscarBtn";
-            buscarBtn.Size = new Size(140, 40);
+            buscarBtn.Size = new Size(160, 53);
             buscarBtn.TabIndex = 5;
             buscarBtn.Text = "🔍 Buscar";
             buscarBtn.UseVisualStyleBackColor = false;
@@ -174,10 +175,10 @@
             limpiarBtn.FlatStyle = FlatStyle.Flat;
             limpiarBtn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             limpiarBtn.ForeColor = Color.White;
-            limpiarBtn.Location = new Point(957, 81);
-            limpiarBtn.Margin = new Padding(4, 3, 4, 3);
+            limpiarBtn.Location = new Point(1094, 108);
+            limpiarBtn.Margin = new Padding(5, 4, 5, 4);
             limpiarBtn.Name = "limpiarBtn";
-            limpiarBtn.Size = new Size(140, 40);
+            limpiarBtn.Size = new Size(160, 53);
             limpiarBtn.TabIndex = 6;
             limpiarBtn.Text = "🗑️ Limpiar";
             limpiarBtn.UseVisualStyleBackColor = false;
@@ -188,10 +189,10 @@
             panelDataGrid.BackColor = Color.White;
             panelDataGrid.BorderStyle = BorderStyle.FixedSingle;
             panelDataGrid.Controls.Add(dataGridView1);
-            panelDataGrid.Location = new Point(23, 277);
-            panelDataGrid.Margin = new Padding(4, 3, 4, 3);
+            panelDataGrid.Location = new Point(26, 369);
+            panelDataGrid.Margin = new Padding(5, 4, 5, 4);
             panelDataGrid.Name = "panelDataGrid";
-            panelDataGrid.Size = new Size(1353, 404);
+            panelDataGrid.Size = new Size(1546, 538);
             panelDataGrid.TabIndex = 2;
             // 
             // dataGridView1
@@ -203,12 +204,12 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Margin = new Padding(4, 3, 4, 3);
+            dataGridView1.Margin = new Padding(5, 4, 5, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1351, 402);
+            dataGridView1.Size = new Size(1544, 536);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
@@ -217,10 +218,10 @@
             panelBotones.BackColor = Color.White;
             panelBotones.Controls.Add(crearBtn);
             panelBotones.Controls.Add(eliminarBtn);
-            panelBotones.Location = new Point(23, 692);
-            panelBotones.Margin = new Padding(4, 3, 4, 3);
+            panelBotones.Location = new Point(26, 923);
+            panelBotones.Margin = new Padding(5, 4, 5, 4);
             panelBotones.Name = "panelBotones";
-            panelBotones.Size = new Size(1353, 69);
+            panelBotones.Size = new Size(1546, 92);
             panelBotones.TabIndex = 3;
             // 
             // crearBtn
@@ -231,10 +232,10 @@
             crearBtn.FlatStyle = FlatStyle.Flat;
             crearBtn.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             crearBtn.ForeColor = Color.White;
-            crearBtn.Location = new Point(501, 13);
-            crearBtn.Margin = new Padding(4, 3, 4, 3);
+            crearBtn.Location = new Point(573, 17);
+            crearBtn.Margin = new Padding(5, 4, 5, 4);
             crearBtn.Name = "crearBtn";
-            crearBtn.Size = new Size(163, 46);
+            crearBtn.Size = new Size(186, 61);
             crearBtn.TabIndex = 0;
             crearBtn.Text = "➕ Crear";
             crearBtn.UseVisualStyleBackColor = false;
@@ -248,10 +249,10 @@
             eliminarBtn.FlatStyle = FlatStyle.Flat;
             eliminarBtn.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             eliminarBtn.ForeColor = Color.White;
-            eliminarBtn.Location = new Point(687, 13);
-            eliminarBtn.Margin = new Padding(4, 3, 4, 3);
+            eliminarBtn.Location = new Point(785, 17);
+            eliminarBtn.Margin = new Padding(5, 4, 5, 4);
             eliminarBtn.Name = "eliminarBtn";
-            eliminarBtn.Size = new Size(163, 46);
+            eliminarBtn.Size = new Size(186, 61);
             eliminarBtn.TabIndex = 1;
             eliminarBtn.Text = "❌ Eliminar";
             eliminarBtn.UseVisualStyleBackColor = false;
@@ -259,16 +260,16 @@
             // 
             // Inventario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(236, 240, 241);
-            ClientSize = new Size(1400, 785);
+            ClientSize = new Size(1600, 1047);
             Controls.Add(panelBotones);
             Controls.Add(panelDataGrid);
             Controls.Add(panelBusqueda);
             Controls.Add(panelHeader);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(4, 3, 4, 3);
+            Margin = new Padding(5, 4, 5, 4);
             MaximizeBox = false;
             Name = "Inventario";
             StartPosition = FormStartPosition.CenterScreen;
