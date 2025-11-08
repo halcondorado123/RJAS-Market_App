@@ -98,10 +98,10 @@ namespace RJAS_Market_App
 
                 if (guardado)
                 {
-                    // ✅ Agregamos a la lista en sesión
+                    // Agregamos a la lista en sesión
                     _proveedoresSesion.Add(producto);
 
-                    // ✅ Refrescamos la grilla solo con los datos actuales
+                    // Refrescamos la grilla solo con los datos actuales
                     CargarProveedoresSesion();
 
                     MessageBox.Show($"Proveedor guardado exitosamente con ID: {producto.IdProveedor}",
@@ -234,12 +234,6 @@ namespace RJAS_Market_App
 
         }
 
-        //private void Proveedor_Load(object sender, EventArgs e)
-        //{
-        //    CargarCategorias();
-        //}
-
-
 
         private void CargarCategorias()
         {
@@ -271,10 +265,10 @@ namespace RJAS_Market_App
             {
                 DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
 
-                // ✅ Asignar el ID seleccionado
+                // Asignar el ID seleccionado
                 IdSeleccionado = Convert.ToInt32(fila.Cells["IdProveedor"].Value);
 
-                // ✅ Llenar los TextBox con los valores seleccionados
+                // Llenar los TextBox con los valores seleccionados
                 nombreProveedorTxt.Text = fila.Cells["NombreProveedor"].Value?.ToString();
                 telefonoTxt.Text = fila.Cells["Telefono"].Value?.ToString();
                 emailTxt.Text = fila.Cells["Email"].Value?.ToString();
@@ -336,7 +330,7 @@ namespace RJAS_Market_App
 
                 if (actualizado)
                 {
-                    // ✅ BUSCAR el registro en la lista de sesión y ACTUALIZARLO
+                    //  BUSCAR el registro en la lista de sesión y ACTUALIZARLO
                     var proveedorEnSesion = _proveedoresSesion.FirstOrDefault(p => p.IdProveedor == IdSeleccionado);
                     if (proveedorEnSesion != null)
                     {
@@ -359,7 +353,7 @@ namespace RJAS_Market_App
                     IdSeleccionado = 0;
                     LimpiarFormulario();
 
-                    // ✅ Refrescar la grid con los datos actualizados
+                    //  Refrescar la grid con los datos actualizados
                     CargarProveedoresSesion();
                 }
                 else
@@ -386,22 +380,5 @@ namespace RJAS_Market_App
             this.Close();
         }
 
-
-
-        //private void CargarCategorias()
-        //{
-        //    try
-        //    {
-        //        List<Categoria> categorias = _dataService.ObtenerCategorias();
-
-        //        categoriaCmb.DataSource = categorias;
-        //        categoriaCmb.DisplayMember = "NombreCategoria";
-        //        categoriaCmb.ValueMember = "IdCategoria";
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Error al cargar categorías: {ex.Message}");
-        //    }
-        //}
     }
 }

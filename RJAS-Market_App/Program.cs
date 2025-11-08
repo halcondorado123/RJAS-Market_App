@@ -1,12 +1,6 @@
 using Microsoft.Data.SqlClient;
-using RJAS_Market_App;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace RJAS_Market_App.Data
 {
