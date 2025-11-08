@@ -15,6 +15,7 @@
 
         #region Windows Form Designer generated code
 
+        // Método necesario para admitir el Diseñador. No se puede modificar
         private void InitializeComponent()
         {
             panelHeader = new Panel();
@@ -40,9 +41,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelBotones.SuspendLayout();
             SuspendLayout();
-            // 
+
             // panelHeader
-            // 
             panelHeader.BackColor = Color.FromArgb(41, 128, 185);
             panelHeader.Controls.Add(lblTitulo);
             panelHeader.Controls.Add(pictureBoxLogo);
@@ -52,9 +52,8 @@
             panelHeader.Name = "panelHeader";
             panelHeader.Size = new Size(1600, 123);
             panelHeader.TabIndex = 0;
-            // 
+
             // lblTitulo
-            // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblTitulo.ForeColor = Color.White;
@@ -64,9 +63,8 @@
             lblTitulo.Size = new Size(564, 46);
             lblTitulo.TabIndex = 1;
             lblTitulo.Text = "GESTIÓN DE INVENTARIO R-J-A-S";
-            // 
+
             // pictureBoxLogo
-            // 
             pictureBoxLogo.BackColor = Color.White;
             pictureBoxLogo.Image = Properties.Resources._73fb2ca0_3dc4_4c58_b97c_4ef7a4456137;
             pictureBoxLogo.Location = new Point(26, 16);
@@ -76,9 +74,8 @@
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxLogo.TabIndex = 0;
             pictureBoxLogo.TabStop = false;
-            // 
+
             // panelBusqueda
-            // 
             panelBusqueda.BackColor = Color.White;
             panelBusqueda.BorderStyle = BorderStyle.FixedSingle;
             panelBusqueda.Controls.Add(lblConsultaBodega);
@@ -93,9 +90,8 @@
             panelBusqueda.Name = "panelBusqueda";
             panelBusqueda.Size = new Size(1546, 183);
             panelBusqueda.TabIndex = 1;
-            // 
+
             // lblConsultaBodega
-            // 
             lblConsultaBodega.AutoSize = true;
             lblConsultaBodega.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblConsultaBodega.ForeColor = Color.FromArgb(52, 73, 94);
@@ -105,9 +101,8 @@
             lblConsultaBodega.Size = new Size(207, 32);
             lblConsultaBodega.TabIndex = 0;
             lblConsultaBodega.Text = "Consulta Bodega";
-            // 
+           
             // lblID
-            // 
             lblID.AutoSize = true;
             lblID.Font = new Font("Segoe UI", 10F);
             lblID.ForeColor = Color.FromArgb(52, 73, 94);
@@ -117,9 +112,8 @@
             lblID.Size = new Size(51, 23);
             lblID.TabIndex = 1;
             lblID.Text = "N° ID";
-            // 
+
             // textBox1
-            // 
             textBox1.Font = new Font("Segoe UI", 10F);
             textBox1.Location = new Point(33, 119);
             textBox1.Margin = new Padding(5, 4, 5, 4);
@@ -127,9 +121,8 @@
             textBox1.Size = new Size(266, 30);
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
-            // 
+
             // lblProducto
-            // 
             lblProducto.AutoSize = true;
             lblProducto.Font = new Font("Segoe UI", 10F);
             lblProducto.ForeColor = Color.FromArgb(52, 73, 94);
@@ -139,9 +132,8 @@
             lblProducto.Size = new Size(175, 23);
             lblProducto.TabIndex = 3;
             lblProducto.Text = "Producto / Proveedor";
-            // 
+
             // textBox2
-            // 
             textBox2.Font = new Font("Segoe UI", 10F);
             textBox2.Location = new Point(334, 119);
             textBox2.Margin = new Padding(5, 4, 5, 4);
@@ -149,9 +141,8 @@
             textBox2.Size = new Size(532, 30);
             textBox2.TabIndex = 4;
             textBox2.TextChanged += textBox2_TextChanged;
-            // 
+
             // buscarBtn
-            // 
             buscarBtn.BackColor = Color.FromArgb(46, 204, 113);
             buscarBtn.Cursor = Cursors.Hand;
             buscarBtn.FlatAppearance.BorderSize = 0;
@@ -166,9 +157,8 @@
             buscarBtn.Text = "🔍 Buscar";
             buscarBtn.UseVisualStyleBackColor = false;
             buscarBtn.Click += buscarBtn_Click_1;
-            // 
+
             // limpiarBtn
-            // 
             limpiarBtn.BackColor = Color.FromArgb(149, 165, 166);
             limpiarBtn.Cursor = Cursors.Hand;
             limpiarBtn.FlatAppearance.BorderSize = 0;
@@ -183,9 +173,8 @@
             limpiarBtn.Text = "🗑️ Limpiar";
             limpiarBtn.UseVisualStyleBackColor = false;
             limpiarBtn.Click += limpiarBtn_Click;
-            // 
+
             // panelDataGrid
-            // 
             panelDataGrid.BackColor = Color.White;
             panelDataGrid.BorderStyle = BorderStyle.FixedSingle;
             panelDataGrid.Controls.Add(dataGridView1);
@@ -194,9 +183,8 @@
             panelDataGrid.Name = "panelDataGrid";
             panelDataGrid.Size = new Size(1546, 538);
             panelDataGrid.TabIndex = 2;
-            // 
+
             // dataGridView1
-            // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = Color.White;
@@ -212,9 +200,8 @@
             dataGridView1.Size = new Size(1544, 536);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
-            // 
+
             // panelBotones
-            // 
             panelBotones.BackColor = Color.White;
             panelBotones.Controls.Add(crearBtn);
             panelBotones.Controls.Add(eliminarBtn);
@@ -223,9 +210,8 @@
             panelBotones.Name = "panelBotones";
             panelBotones.Size = new Size(1546, 92);
             panelBotones.TabIndex = 3;
-            // 
+  
             // crearBtn
-            // 
             crearBtn.BackColor = Color.FromArgb(52, 152, 219);
             crearBtn.Cursor = Cursors.Hand;
             crearBtn.FlatAppearance.BorderSize = 0;
@@ -240,9 +226,8 @@
             crearBtn.Text = "➕ Crear";
             crearBtn.UseVisualStyleBackColor = false;
             crearBtn.Click += crearBtn_Click;
-            // 
+
             // eliminarBtn
-            // 
             eliminarBtn.BackColor = Color.FromArgb(231, 76, 60);
             eliminarBtn.Cursor = Cursors.Hand;
             eliminarBtn.FlatAppearance.BorderSize = 0;
@@ -257,9 +242,8 @@
             eliminarBtn.Text = "❌ Eliminar";
             eliminarBtn.UseVisualStyleBackColor = false;
             eliminarBtn.Click += eliminarBtn_Click;
-            // 
+
             // Inventario
-            // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(236, 240, 241);

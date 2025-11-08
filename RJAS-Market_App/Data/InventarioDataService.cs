@@ -6,15 +6,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace RJAS_Market_App.Data
 {
-    public class InventarioDataService  // Clase estática
+    // Servicio de datos para gestionar inventario
+    public class InventarioDataService 
     {
-        // Eliminar productosSimulados si no lo usas
-        // O hacerlo estático si lo necesitas
-        // private static List<Producto> productosSimulados;
-
         private readonly static string connectionString =
                System.Configuration.ConfigurationManager.ConnectionStrings["MiConexionSQL"].ConnectionString;
 
+        // Busca un producto por su ID
         public Producto BuscarPorID(int id)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -37,7 +35,6 @@ namespace RJAS_Market_App.Data
                                    "INNER JOIN RJAS.CATEGORIA_PRODUCTO AS C " +
                                    "ON P.ID_CATEGORIA = C.ID_CATEGORIA " +
                                    "WHERE P.ID_PROVEEDOR = @ID_PROVEEDOR;";
-
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@ID_PROVEEDOR", id);
@@ -66,6 +63,7 @@ namespace RJAS_Market_App.Data
             }
         }
 
+        // Busca un producto por su nombre
         public Producto BuscarPorNombre(string nombre)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -117,6 +115,7 @@ namespace RJAS_Market_App.Data
             }
         }
 
+        // Obtiene todos los productos
         public List<Producto> ObtenerTodos()
         {
             List<Producto> productos = new List<Producto>();
@@ -152,12 +151,7 @@ namespace RJAS_Market_App.Data
             return productos;
         }
 
-
-        public Producto BuscarPorNombre(object nombre)
-        {
-            throw new NotImplementedException();
-        }
-
+        // Elimina un proveedor por su ID
         public void EliminarProveedor(int id)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))

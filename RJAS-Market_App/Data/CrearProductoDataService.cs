@@ -1,14 +1,15 @@
 ﻿using Microsoft.Data.SqlClient;
 using RJAS_Market_App.Models;
-using System.Data;
 
 namespace TuAplicacion.Services
 {
+    // Servicio de datos para gestionar proveedores y categorías
     public class ProveedorDataService
     {
         private readonly static string connectionString =
                System.Configuration.ConfigurationManager.ConnectionStrings["MiConexionSQL"].ConnectionString;
 
+        // Guarda un nuevo proveedor en la base de datos
         public bool GuardarProveedor(Producto producto)
         {
             try
@@ -77,6 +78,7 @@ namespace TuAplicacion.Services
             }
         }
 
+        // Actualiza un proveedor existente en la base de datos
         public bool ActualizarProveedor(Producto producto)
         {
             try
@@ -122,6 +124,7 @@ namespace TuAplicacion.Services
             }
         }
 
+        // Obtiene la lista de categorías desde la base de datos
         public List<Categoria> ObtenerCategorias()
         {
             List<Categoria> categorias = new List<Categoria>();

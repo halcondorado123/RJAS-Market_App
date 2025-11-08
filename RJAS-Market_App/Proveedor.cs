@@ -387,6 +387,7 @@ namespace RJAS_Market_App
         }
 
 
+
         //private void CargarCategorias()
         //{
         //    try

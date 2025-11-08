@@ -13,18 +13,17 @@ namespace RJAS_Market_App.Data
 
     public static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inventario()); // Cambia "Inventario" por tu formulario principal
+            Application.Run(new Inventario());
         }
     }
 }
+
+// Clase estática para gestionar la conexión a la base de datos
 public static class DatabaseConnection
 {
     private static readonly string connectionString =
@@ -36,7 +35,8 @@ public static class DatabaseConnection
         return connection;
     }
 
-    // Ejemplo de prueba
+
+    // Método para probar la conexión a la base de datos
     public static bool TestConnection()
     {
         try
